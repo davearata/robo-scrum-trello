@@ -4,7 +4,12 @@ angular.module('roboScrumTrelloApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'roboscrum-user',
+  'roboscrum-auth',
+  'roboscrum-session',
+  'roboscrum-settings',
+  'roboscrum-teams-list'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -19,6 +24,10 @@ angular.module('roboScrumTrelloApp', [
       .when('/signup', {
         templateUrl: 'partials/signup',
         controller: 'SignupCtrl'
+      })
+      .when('/teams', {
+        templateUrl: 'partials/teams-list',
+        controller: 'TeamsListCtrl'
       })
       .when('/settings', {
         templateUrl: 'partials/settings',

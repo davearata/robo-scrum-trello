@@ -2,14 +2,21 @@
 
 angular.module('roboScrumTrelloApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
+    var homeMenu = {
       'title': 'Home',
       'link': '/'
-    }, {
+    };
+
+    if(!!$scope.currentUser) {
+      homeMenu.link = '/teams';
+    }
+
+    $scope.menu = [homeMenu,
+      {
       'title': 'Settings',
       'link': '/settings'
     }];
-    
+
     $scope.logout = function() {
       Auth.logout()
       .then(function() {

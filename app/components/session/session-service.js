@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('roboScrumTrelloApp')
+angular.module('roboscrum-session')
   .factory('Session', function ($resource) {
     return $resource('/api/session/');
   });

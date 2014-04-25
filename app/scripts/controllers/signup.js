@@ -16,7 +16,7 @@ angular.module('roboScrumTrelloApp')
         })
         .then( function() {
           // Account created, redirect to home
-          $location.path('/');
+          $location.path('/teams');
         })
         .catch( function(err) {
           err = err.data;
