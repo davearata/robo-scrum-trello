@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('roboscrum-user', []);
+angular.module('roboscrum-user', ['ngResource']);

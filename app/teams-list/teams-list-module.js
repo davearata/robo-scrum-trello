@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('roboscrum-teams-list', []);
+angular.module('roboscrum-teams-list', ['roboscrum-team']);

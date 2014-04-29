@@ -1,0 +1,36 @@
+<div ng-include="'partials/navbar.html'"></div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1>Add Scrum Team</h1>
+    </div>
+    <div class="col-sm-12">
+        <form class="form" name="form" ng-submit="addTeam(form)" novalidate>
+
+            <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                          'has-error': form.name.$invalid && submitted }">
+                <label>Name</label>
+
+                <input type="text" name="name" class="form-control" ng-model="team.name"
+                       placeholder="Team Name" required/>
+
+                <p class="help-block" ng-show="form.name.$error.required && submitted">
+                    A name is required
+                </p>
+            </div>
+            <label>Members</label>
+            <div class="form-group" data-ng-repeat="member in team.members">
+                <div class="form-group">
+                    <input type="text" name="member_name_{{$index}}" class="form-control" ng-model="member.name"
+                           placeholder="Enter Member name" required/>
+                </div>
+
+                <button ng-show="$last" type="button" class="btn btn-default btn-xs" ng-click="addMember()">
+                    <span class="glyphicon glyphicon-plus"></span> add member
+                </button>
+            </div>
+
+            <button class="btn btn-lg btn-primary" type="submit">Add Team</button>
+        </form>
+    </div>
+</div>
