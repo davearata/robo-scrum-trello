@@ -19,13 +19,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="roboScrumTrelloApp">
+  <body ng-app="roboScrumTrelloApp" role="document">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -59,23 +59,27 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="components/angular-trello/angular-trello-module.js"></script>
         <script src="components/auth/auth-module.js"></script>
+        <script src="components/navbar/navbar-module.js"></script>
         <script src="components/session/session-module.js"></script>
         <script src="components/team/team-module.js"></script>
         <script src="components/user/user-module.js"></script>
         <script src="add-team/add-team-module.js"></script>
         <script src="settings/settings-module.js"></script>
+        <script src="team-details/team-details-module.js"></script>
         <script src="teams-list/teams-list-module.js"></script>
         <script src="components/angular-trello/angular-trello-service.js"></script>
         <script src="components/auth/auth-service.js"></script>
+        <script src="components/navbar/navbar-controller.js"></script>
+        <script src="components/navbar/navbar-directive.js"></script>
         <script src="components/session/session-service.js"></script>
         <script src="components/team/team-service.js"></script>
         <script src="components/user/user-service.js"></script>
         <script src="add-team/add-team-controller.js"></script>
         <script src="settings/settings-controller.js"></script>
+        <script src="team-details/team-details-controller.js"></script>
         <script src="teams-list/teams-list-controller.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/navbar.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/directives/mongooseError.js"></script>

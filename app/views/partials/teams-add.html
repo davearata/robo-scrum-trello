@@ -1,9 +1,11 @@
-<div ng-include="'partials/navbar.html'"></div>
+<navbar></navbar>
 
 <div class="row">
     <div class="col-sm-12">
         <h1>Add Scrum Team</h1>
     </div>
+</div>
+<div class="row">
     <div class="col-sm-12">
         <form class="form" name="form" ng-submit="addTeam(form)" novalidate>
 
@@ -19,10 +21,14 @@
                 </p>
             </div>
             <label>Members</label>
+
             <div class="form-group" data-ng-repeat="member in team.members">
                 <div class="form-group">
-                    <input type="text" name="member_name_{{$index}}" class="form-control" ng-model="member.name"
-                           placeholder="Enter Member name" required/>
+                    <div class="input-group">
+                        <span class="input-group-addon">Name</span>
+                        <input type="text" name="member_name_{{$index}}" class="form-control" ng-model="member.name"
+                               placeholder="Enter Member name" required/>
+                    </div>
                 </div>
 
                 <button ng-show="$last" type="button" class="btn btn-default btn-xs" ng-click="addMember()">

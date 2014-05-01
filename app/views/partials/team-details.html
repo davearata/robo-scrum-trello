@@ -1,0 +1,35 @@
+<navbar></navbar>
+
+<div class="container" role="main">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1>{{team.name}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Sprints</div>
+                <ul class="list-group">
+                    <li class="list-group-item" data-ng-repeat="sprint in sprints">
+                        {{sprint.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Members</div>
+                <ul class="list-group">
+                    <li class="list-group-item" data-ng-repeat="member in team.members">
+                        {{member.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

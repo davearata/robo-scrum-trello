@@ -10,7 +10,9 @@ angular.module('roboScrumTrelloApp', [
   'roboscrum-session',
   'roboscrum-settings',
   'roboscrum-teams-list',
-  'roboscrum-addteam'
+  'roboscrum-addteam',
+  'roboscrum-teamdetails',
+  'roboscrum-navbar'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -29,6 +31,10 @@ angular.module('roboScrumTrelloApp', [
       .when('/teams', {
         templateUrl: 'partials/teams-list',
         controller: 'TeamsListCtrl'
+      })
+      .when('/teams/:id', {
+        templateUrl: 'partials/team-details',
+        controller: 'TeamDetailsCtrl'
       })
       .when('/teams/add', {
         templateUrl: 'partials/teams-add',

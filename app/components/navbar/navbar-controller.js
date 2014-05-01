@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('roboScrumTrelloApp')
+angular.module('roboscrum-navbar')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     var homeMenu = {
       'title': 'Home',

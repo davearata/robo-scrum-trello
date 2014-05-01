@@ -1,4 +1,4 @@
-<div ng-include="'partials/navbar.html'"></div>
+<navbar></navbar>
 
 <div class="row">
     <div class="col-sm-12">
@@ -9,9 +9,14 @@
             </button>
         </a>
     </div>
+</div>
+
+<div class="row spacer">
     <div class="col-sm-12">
-        <div data-ng-repeat="team in teams">
-            {{team.name}}
-        </div>
+        <ul class="list-group">
+            <li class="list-group-item" data-ng-repeat="team in teams">
+                <a href="/teams/{{team._id}}">{{team.name}}</a>
+            </li>
+        </ul>
     </div>
 </div>
